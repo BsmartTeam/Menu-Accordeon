@@ -19,8 +19,5 @@ by Alex :D
 + Dan
 <<<<<<< HEAD
 + Kate
-=======
->>>>>>> 1baad95011f182926ad1c80a2f4a21d8c031ff4e
-ok
->>>>>>> c80319604aa1516268086ef7e04e020b48f36f4e
 + Vasile
+=======
