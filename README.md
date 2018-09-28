@@ -18,4 +18,12 @@ by Alex :D
 
 =======
 + Dan
+<<<<<<< HEAD
 >>>>>>> 1baad95011f182926ad1c80a2f4a21d8c031ff4e
+=======
+<<<<<<< HEAD
++ Kate
++ Vasile
++ Filip
+=======
+>>>>>>> d4bce33187e9b0d68841cd59cfe28aac42222d21
