@@ -1,6 +1,8 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: #777;
+  background: url("https://ilovesamsung.ro/wp-content/uploads/2016/11/imagini-de-fundal-2880x2560-40-1024x910.jpg") center center no-repeat;
+  background-size: cover;
 }
 
 a {
@@ -17,6 +19,7 @@ nav {
   left: 50%;
   transform: translateX(-50%);
   margin: auto;
+  box-shadow: 0 20px 150px #000000;
 }
 nav .menu {
   background-color: #E4644B;
@@ -24,6 +27,7 @@ nav .menu {
   border-radius: 5px;
 }
 nav .menu li {
+  cursor: pointer;
   padding: 15px 20px;
   font-weight: bold;
   font-size: 16px;
@@ -40,26 +44,32 @@ nav .menu .sub-menu {
   padding: 0;
   background-color: #494041;
   display: none;
+  animation: menu-animation 0.2s ease-in;
 }
-nav .menu .sub-menu-toggle:hover + .sub-menu, nav .menu .sub-menu .sub-menu:hover {
+nav .menu .sub-menu-toggle:hover + .sub-menu {
+  display: block;
+}
+nav .menu .sub-menu:hover {
   display: block;
 }
 nav .menu .sub-menu-toggle {
   position: relative;
 }
-nav .menu .sub-menu-toggle::after {
+nav .menu .sub-menu li:first-child {
+  position: relative;
+  padding-top: 20px;
+}
+nav .menu .sub-menu li:first-child::after {
   content: "";
   position: absolute;
-  bottom: -12px;
-  left: 18px;
+  top: -1px;
+  display: block;
+  left: 13px;
   width: 0;
   height: 0;
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
   border-top: 12px solid #E4644B;
-}
-nav .menu .sub-menu li:first-child {
-  padding-top: 20px;
 }
 nav .menu .sub-menu li {
   border-bottom: none;
@@ -73,6 +83,36 @@ nav .menu .sub-menu li:hover {
 }
 nav .menu .sub-menu li a {
   opacity: 0.5;
+  transition: 0.3s;
+}
+nav .menu .sub-menu li a:hover {
+  opacity: 1;
+}
+nav .menu #messages {
+  position: relative;
+}
+nav .menu #messages::after {
+  content: "13";
+  padding: 5px 10px;
+  right: 10px;
+  background-color: #494041;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: normal;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+@keyframes menu-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
