@@ -3,70 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet">
-  <title>Adaptive Menu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
+  <link rel="stylesheet" href="assets/css/main.css">
+  <title>Menu Accordeon</title>
 </head>
 <body>
-  <header>
-    <nav class="dws-menu">
-        <input type="checkbox" name="toggle" id="burger" class="toggleMenu">
-        <label for="burger" class="toggleMenu"><i class="fa fa-bars"></i>Menu</label>
-        <ul>
-            <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+    <!-- nav>ul.menu>li*4>a -->
+    <nav>
+        <ul class="menu">
             <li>
-                <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m1">
-                <a href="#"><i class="fa fa-shopping-cart"></i>Products</a>
-                <label for="sub_m1" class="toggleSubmenu"><i class="fa"></i></label>
+                <a href="#"><i class="fa fa-user-o"></i> Profile</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-envelope-o"></i> Messages</a>
+            </li>
+            <li class="sub-menu-toggle">
+                <a href="#"><i class="fa fa-cog"></i> Settings</a>
+                
+            </li>
+            <li class="sub-menu">
                 <ul>
-                    <li>
-                        <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m1-1">
-                        <a href="#">CPU</a>
-                        <label for="sub_m1-1" class="toggleSubmenu"><i class="fa"></i></label>
-                        <ul>
-                            <li><a href="#">Intel</a></li>
-                            <li><a href="#">AMD</a></li>
-                          </ul>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m1-2">
-                        <a href="#">M-Board</a>
-                        <label for="sub_m1-2" class="toggleSubmenu"><i class="fa"></i></label>
-                        <ul>
-                            <li><a href="#">Socket 1155</a></li>
-                            <li><a href="#">Socket 1150</a></li>
-                            <li>
-                                <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m1-2-1">
-                                <a href="#">Socket AM4</a>
-                                <label for="sub_m1-2-1" class="toggleSubmenu"><i class="fa"></i></label>
-                                <ul>
-                                    <li><a href="#">Ryzen 3</a></li>
-                                    <li><a href="#">Ryzen 5</a></li>
-                                    <li><a href="#">Ryzen 7</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="#">GPU</a></li>
-                    <li><a href="#">CASE</a></li>
-                    <li><a href="#">PSU</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Password</a></li>
+                    <li><a href="#">Notifications</a></li>
+                    <li><a href="#">Pro Account</a></li>
+                    <li><a href="#">Billing</a></li>
                 </ul>
             </li>
             <li>
-                <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m2">
-                <a href="#"><i class="fa fa-cogs"></i>Services</a>
-                <label for="sub_m2" class="toggleSubmenu"><i class="fa"></i></label>
-                <ul>
-                    <li><a href="#">Service 1</a></li>
-                    <li><a href="#">Service 2</a></li>
-                    <li><a href="#">Service 3</a></li>
-                </ul>
+                <a href="#"><i class="fa fa-sign-out"></i> Logout</a>
             </li>
-            <li><a href="#"><i class="fa fa-newspaper-o"></i>News</a></li>
-            <li><a href="#"><i class="fa fa-envelope-open-o"></i>Contacts</a></li>
         </ul>
     </nav>
-</header>
 </body>
 </html>

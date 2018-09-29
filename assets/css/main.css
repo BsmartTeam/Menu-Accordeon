@@ -1,0 +1,78 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #777;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+a:hover, a:visited, a:active {
+  text-decoration: none;
+}
+
+nav {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: auto;
+}
+nav .menu {
+  background-color: #E4644B;
+  width: 275px;
+  border-radius: 5px;
+}
+nav .menu li {
+  padding: 15px 20px;
+  font-weight: bold;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+nav .menu li:last-child {
+  border-bottom: none;
+}
+nav .menu li .fa {
+  margin-right: 20px;
+  font-size: 24px;
+}
+nav .menu .sub-menu {
+  padding: 0;
+  background-color: #494041;
+  display: none;
+}
+nav .menu .sub-menu-toggle:hover + .sub-menu, nav .menu .sub-menu .sub-menu:hover {
+  display: block;
+}
+nav .menu .sub-menu-toggle {
+  position: relative;
+}
+nav .menu .sub-menu-toggle::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 18px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #E4644B;
+}
+nav .menu .sub-menu li:first-child {
+  padding-top: 20px;
+}
+nav .menu .sub-menu li {
+  border-bottom: none;
+  font-size: 0.8rem;
+  font-weight: 300;
+  border-left: 4px solid transparent;
+  transition: 0.5s;
+}
+nav .menu .sub-menu li:hover {
+  border-left: 4px solid #E4644B;
+}
+nav .menu .sub-menu li a {
+  opacity: 0.5;
+}
+
+/*# sourceMappingURL=main.css.map */
