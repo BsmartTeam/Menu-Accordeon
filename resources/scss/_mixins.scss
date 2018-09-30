@@ -1,0 +1,40 @@
+@mixin counter($number, $color) {
+    content: "#{$number}";
+    padding: 4px 11px 4px 10px;
+    right: 10px;
+    background-color: $color;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: $normal;
+    color: rgba(255, 255, 255, .8);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+@mixin triangle($direction, $dimension, $color) {
+    content: '';
+    position: absolute;
+    top: -1px;
+    display: block;
+    width: 0;
+    height: 0;
+    @if $direction == top {
+        border-right: #{$dimension}px solid transparent;
+        border-bottom: #{$dimension}px solid $color;
+        border-left: #{$dimension}px solid transparent;
+    } @else if $direction == right {
+        border-top: #{$dimension}px solid transparent;
+        border-right: #{$dimension}px solid $color;
+        border-left: #{$dimension}px solid transparent;
+    } @else if $direction == bottom {
+        border-top: #{$dimension}px solid $color;
+        border-right: #{$dimension}px solid transparent;
+        border-left: #{$dimension}px solid transparent;
+    } @else if $direction == left {
+        border-top: #{$dimension}px solid transparent;
+        border-right: #{$dimension}px solid $color;
+        border-bottom: #{$dimension}px solid transparent;
+    }
+}

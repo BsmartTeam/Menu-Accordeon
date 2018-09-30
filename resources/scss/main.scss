@@ -1,124 +1,154 @@
+// Imports
+@import "vendor";
+@import "variables";
+@import "fonts";
+@import "mixins";
 
-@import 'variables';
-// @import '../../vendor/normalize/normalize';
-// @import '../../vendor/font-awesome/scss/font-awesome';
-
-body{
-    font-family: "Roboto", sans-serif;
-    background-color: #777;
-    background: url('https://ilovesamsung.ro/wp-content/uploads/2016/11/imagini-de-fundal-2880x2560-40-1024x910.jpg') center center no-repeat;
+// Styles
+body {
+    font-family: $family, sans-serif;
+    background-color: $secondary-color;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
+    width: 100vw;
+    height: 100vh;
 }
-a{
+
+a {
     text-decoration: none;
     color: #fff;
-    &:hover, &:visited, &:active{
+
+    &:hover,
+    &:visited,
+    &:active {
         text-decoration: none;
     }
 }
-nav{
+
+nav {
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translateX(-50%);
     margin: auto;
     box-shadow: 0 20px 150px #000000;
-    .menu{   
+    border-radius: 5px;
+
+    .menu {
         background-color: $main-color;
         width: 275px;
         border-radius: 5px;
-        li{
+
+        a {
+            opacity: .8;
+        }
+
+        li {
             cursor: pointer;
             padding: 15px 20px;
-            font-weight: bold;
+            font-weight: $bold;
             font-size: 16px;
             border-bottom: 1px solid rgba(0, 0, 0, .1);
-            &:last-child{
+
+            &:last-child {
                 border-bottom: none;
             }
-            .fa{
-                margin-right: 20px;
+
+            span {
+                display: inline-block;
+                width: 24px;
+                padding-right: 16px;
                 font-size: 24px;
+                text-align: center;
             }
-        }     
-        
-        .sub-menu{   
-            
-            padding: 0;         
+
+            &:hover a {
+                opacity: 1;
+            }
+        }
+
+        .sub-menu {
+            padding: 0;
             background-color: $secondary-color;
             display: none;
-            animation: menu-animation .2s ease-in;
-            &-toggle:hover+.sub-menu{
+            animation: sumbenu-fade .2s ease-in;
+
+            &-toggle:hover+.sub-menu {
                 display: block;
             }
-            &:hover{
+
+            &:hover {
                 display: block;
             }
-            &-toggle{
+
+            &-toggle {
                 position: relative;
             }
-            li:first-child{
+
+            li:first-child {
                 position: relative;
                 padding-top: 20px;
-                &::after{
-                    content: '';
-                    position: absolute;
-                    top: -1px;
-                    display: block;
+
+                &::before {
+                    @include triangle(bottom, 12, $main-color);
                     left: 13px;
-                    width: 0; 
-                    height: 0; 
-                    border-left: 12px solid transparent;
-                    border-right: 12px solid transparent;
-                    border-top: 12px solid $main-color;
                 }
             }
-            li{                
+
+            li {
                 border-bottom: none;
                 font-size: 0.8rem;
-                font-weight: 300;
+                font-weight: $normal;
                 border-left: 4px solid transparent;
                 transition: .5s;
-                &:hover{
+
+                &:hover {
                     border-left: 4px solid $main-color;
                 }
-                a{
-                    opacity: .5;
-                    transition: .3s;
-                    &:hover{
-                        opacity: 1;
-                    }
+
+                &:hover a {
+                    opacity: 1;
+                }
+
+                a {
+                    opacity: .6;
                 }
             }
         }
-        #messages{
+
+        #messages {
             position: relative;
-            &::after{
-                content: '13';
-                padding: 5px 10px;
-                right: 10px;
-                background-color: $secondary-color;
-                border-radius: 10px;
-                font-size: 10px; 
-                font-weight: normal;
-                color: #fff;
-                position: absolute;
-                top: 50%;
-                right: 20px;
-                transform: translateY(-50%);
+
+            &::after {
+                @include counter(13, $secondary-color);
+            }
+        }
+
+        #inbox {
+            position: relative;
+
+            &::after {
+                @include counter(8, $main-color);
+            }
+        }
+
+        #drafts {
+            position: relative;
+
+            &::after {
+                @include counter(5, $main-color);
             }
         }
     }
-    
-    
 }
 
-
-@keyframes menu-animation{
-    from{
+@keyframes sumbenu-fade {
+    from {
         opacity: 0;
     }
-    to{
+
+    to {
         opacity: 1;
     }
 }

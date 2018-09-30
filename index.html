@@ -1,35 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
-  <link rel="stylesheet" href="assets/css/main.css">
-  <title>Menu Accordeon</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Menu Accordeon</title>
 </head>
+
 <body>
-    <!-- nav>ul.menu>li*4>a -->
     <nav>
         <ul class="menu">
             <li>
-                <a href="#"><i class="fa fa-user-o"></i> Profile</a>
+                <a href="#"><span><i class="fa fa-user-o"></i></span> Profile</a>
             </li>
             <li class="sub-menu-toggle" id="messages">
-                <a href="#"><i class="fa fa-envelope-o"></i> Messages</a>
+                <a href="#"><span><i class="fa fa-envelope-o"></i></span> Messages</a>
             </li>
             <li class="sub-menu">
                 <ul>
-                    <li><a href="#">Inbox</a></li>
-                    <li><a href="#">Send</a></li>
-                    <li><a href="#">All mail</a></li>
-                    <li><a href="#">Drafts</a></li>
-                    <li><a href="#">Recycle bin</a></li>
+                    <li id="inbox"><a href="#">Inbox</a></li>
+                    <li id="sends"><a href="#">Sends</a></li>
+                    <li id="all_messages"><a href="#">All messages</a></li>
+                    <li id="drafts"><a href="#">Drafts</a></li>
+                    <li id="recycle"><a href="#">Recycle bin</a></li>
                 </ul>
             </li>
             <li class="sub-menu-toggle">
-                <a href="#"><i class="fa fa-cog"></i> Settings</a>
-                
+                <a href="#"><span><i class="fa fa-cog"></i></span> Settings</a>
+
             </li>
             <li class="sub-menu">
                 <ul>
@@ -41,9 +40,10 @@
                 </ul>
             </li>
             <li>
-                <a href="#"><i class="fa fa-sign-out"></i> Logout</a>
+                <a href="#"><span><i class="fa fa-sign-out"></i></span> Logout</a>
             </li>
         </ul>
     </nav>
 </body>
+
 </html>
