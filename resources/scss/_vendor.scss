@@ -1,2 +1,7 @@
-@import '../../vendor/meyer-reset/reset';
-@import "../../vendor/font-awesome/scss/font-awesome";
+@import "../../vendor/meyer-reset/reset";
+
+// Font-Awesome Full (add 36kb)
+// @import "../../vendor/font-awesome/scss/font-awesome";
+
+// Font-Awesome Only Nedd Icons (modified, add ~1kb)
+@import "font-awesome-only-need-icons";
